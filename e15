@@ -1,0 +1,9 @@
+N=2
+import numpy as np
+a=np.array([N,N])
+for i in range (0,N):
+	a[0][i] = a[i][0] = 1
+for i in range (0,N):
+	for j in range (i,N):
+		a[i][j] = a[i-1][j]+a[i][j-1]
+print(a[N-1][N-1])
